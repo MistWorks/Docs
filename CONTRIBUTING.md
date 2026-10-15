@@ -25,8 +25,9 @@ Open an Issue in the repository you want to contribute to before sending a PR. D
 2. Content and style - up to you
 
 ### Headers
-1. In `.c` files: first `#include "types.h"`, then `#include "FILENAME.h"`, then everything else
-2. In headers: `#pragma once` first (**not** include guards), then the content
+1. In `.h` files: first `#include "types.h"`, then `#include "FILENAME.h"`, then everything else
+2. All includes have to be in header. `.c` file must include only own `.h`
+3. In headers: `#pragma once` first (**not** include guards), then the content
 
 ### Types
 Use only types from `types.h`. Do not include `stdio.h`
@@ -52,7 +53,7 @@ void ravefunc(int x);
 #define EXAMPLE_MACROS(x, y) ((x) + (y))
 
 void ravefunc(int x) {
-	int z;
+	int z = 0;
 	if (x <= 0) return;
 	for (int i = 10; i > 0; i--) {
 		z += EXAMPLE_MACROS(x, i);
@@ -66,16 +67,16 @@ void ravefunc(int x) {
 Each project has its own scope, and PRs must follow it:
 - **Mist** - drivers, kernel, utilities
 - **Minit** - boot process
-- **Mistic** - hardware-independent code that doesn't depend on other MistWorks projects (except `sys/`, see [Mistic docs](https://github.com/MistWorks/Mistic))
+- **Mistic** - hardware-independent code that doesn't depend on other MistWorks projects (except `sys/`, see [Mistic docs](https://github.com/MistWorks/Mistic/tree/main/docs))
 
 ### Compatibility
 Although Mistic is a standalone libc, its functions must match glibc's behavior. Keep your code predictable
 
 ## Testing
 There is no CI yet. Test manually:
-1. [Build](BUILDnBOOT.md#building) must pass without errors
-2. [Boot](BUILDnBOOT.md#booting-in-qemu) in QEMU must pass without errors
-3. If your change affects hardware, [test on real hardware](BUILDnBOOT.md#booting-on-real-hardware)
+1. [Build](BUILDnBOOT#Building) must pass without errors
+2. [Boot](BUILDnBOOT#Booting%20in%20QEMU) in QEMU must pass without errors
+3. If your change affects hardware, [test on real hardware](BUILDnBOOT#Booting%20on%20real%20hardware)
 
 ## Commits
 1. Name commits so they describe the change

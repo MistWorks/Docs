@@ -54,7 +54,7 @@ _Focus were temporary switched to other projects_
 
 ### In process
 - Standardized errors
-- "Weak" panic function (watch [Mistic doc](https://github.com/MistWorks/Mistic/doc))
+- "Weak" panic function (watch [Mistic doc](https://github.com/MistWorks/Mistic/tree/main/docs))
 - Modules improvement
 - Bug fixes
 

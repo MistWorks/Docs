@@ -13,10 +13,10 @@ This documentation describes:
 - [Roadmap](ROADMAP.md) of whole project
 - [How to build and boot](BUILDnBOOT.md) guide
 
-Every part of the ecosystem has (or willorderave) own, more detailed and specification-full documentation:
-- [Mist](https://github.com/MistWorks/Mist/docs) 
-- [Minit](https://github.com/MistWorks/Minit/docs) 
-- [Mistic](https://github.com/MistWorks/Mistic/docs)
+Every part of the ecosystem has (or will have) own, more detailed and specification-full documentation:
+- [Mist](https://github.com/MistWorks/Mist/tree/main/docs) 
+- [Minit](https://github.com/MistWorks/Minit/tree/main/docs) 
+- [Mistic](https://github.com/MistWorks/Mistic/tree/main/docs)
 
 ## Status and limits
 - Supported: x86_64 processor arch, Legacy BIOS mode, VGA text mode
@@ -31,6 +31,7 @@ If you don't want to learn all details and just want to try, make sure that you 
 - make
 - ld
 - dd
+
 On your PC
 Then do:
 
